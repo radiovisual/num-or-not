@@ -1,4 +1,4 @@
-# num-or-not
+# num-or-not [![Build Status](https://travis-ci.org/radiovisual/num-or-not.svg)](https://travis-ci.org/radiovisual/num-or-not)
 > Check for a valid Number value.
 
 Numbers, and values that can be cast or evaluated to numbers will return `true`.
