@@ -27,10 +27,16 @@ isNumber(5.0);          // => true
 isNumber('5.0');        // => true
 isNumber('5,0');        // => true
 
-// Octal
+// Octal (ES6)
 isNumber(0o144);        // => true
+isNumber(0O144);        // => true
 isNumber('0o144');      // => true
+isNumber('0O144');      // => true
 
+// Binary (ES6)
+isNumber(0b0);          // => true
+isNumber('0b0');        // => true
+   
 // Hexadecimal
 isNumber(0xFF);         // => true    
 isNumber('0xFF');       // => true
@@ -49,6 +55,12 @@ isNumber(+true);        // => true
 isNumber(+new Date);    // => true
 ```
 
+## Known Limitations
+
+-  These binary and octal formats are **only supported in ES6** environments:
+ - Binary: `0b0`
+ - Octal: `0o144` & `0O144`
+ 
 ## Why?
 
 Why do we need another open source number validator in Javascript? **We don't**, but I wanted one to help keep me accountable of the data type nuances in JS.
