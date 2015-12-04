@@ -1,5 +1,5 @@
 {
-  "name": "num-or-null",
+  "name": "num-or-not",
   "version": "1.0.0",
   "description": "Check for a valid Number value.",
   "main": "index.js",
