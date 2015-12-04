@@ -48,7 +48,7 @@ const valuesToFail = [
 ];
 
 
-test.cb('valid numbers should pass', t => {
+test.cb('valid numbers should return true', t => {
     t.plan(valuesToPass.length);
 
     for (let i in valuesToPass){
@@ -60,7 +60,7 @@ test.cb('valid numbers should pass', t => {
 
 });
 
-test.cb('invalid numbers should fail', t => {
+test.cb('invalid numbers should return false', t => {
     t.plan(valuesToFail.length);
 
     for (let i in valuesToFail){
@@ -71,8 +71,10 @@ test.cb('invalid numbers should fail', t => {
     t.end();
 });
 
-test('should fail on whitespace chars', t => {
+test('should ignore whitespace chars', t => {
     t.is(isNum('      '), false);
     t.is(isNum('\r\n\t'), false);
+    t.is(isNum(' 42 '), true);
+    t.is(isNum('   0xFF    '), true);
 });
 
