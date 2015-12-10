@@ -11,7 +11,7 @@ module.exports = function(n) {
     }
 
     if (type === 'string'){
-        n = n.replace(/,/g, '');
+        n = n.replace(/[,|.]/g, '');
         if (n.trim() === ''){
             return false;
         } else {

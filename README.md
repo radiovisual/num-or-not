@@ -47,6 +47,10 @@ isNumber(12e-2);        // => true
 isNumber('6e3');        // => true
 isNumber('12e-2');      // => true
 
+// Currency Values
+isNumber('12,456,789'); // => true
+isNumber('45,678.123'); // => true
+
 // "Evaluates to Int" values
 isNumber(+'');          // => true
 isNumber(+[]);          // => true
@@ -60,6 +64,13 @@ isNumber(+new Date);    // => true
 -  These binary and octal formats are **only supported in ES6** environments:
  - Binary: `0b0`
  - Octal: `0o144` & `0O144`
+ 
+- In order to support numbers with commas or decimals (currencies, Dewey Decimal System, etc), some unique values can pass as valid numbers:
+ - `1,2,3.4.5`
+ - `1,2,3,4.5`
+ 
+- Open a pull request or issue if you think we need tighter control over these limitations.
+ 
  
 ## Why?
 
