@@ -2,23 +2,19 @@
 
 var trim = require('trim');
 
-module.exports = function(n) {
-
+module.exports = function (n) {
     var type = typeof n;
 
-    if (type !== 'string' && type !== 'number'){
+    if (type !== 'string' && type !== 'number') {
         return false;
     }
 
-    if (type === 'string'){
+    if (type === 'string') {
         n = n.replace(/[,|.]/g, '');
-        if (n.trim() === ''){
+        if (trim(n) === '') {
             return false;
-        } else {
-            n = +n;
         }
+        n = Number(n);
     }
-
     return typeof n === 'number' && n - n < 1;
-
 };
