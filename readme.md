@@ -1,4 +1,5 @@
 # num-or-not [![Build Status](https://travis-ci.org/radiovisual/num-or-not.svg)](https://travis-ci.org/radiovisual/num-or-not)
+
 > Check for a valid Number value.
 
 Numbers, and values that can be cast or evaluated to numbers will return `true`.
@@ -65,7 +66,7 @@ isNumber(+new Date);    // => true
  - Binary: `0b0`
  - Octal: `0o144` & `0O144`
  
-- In order to support numbers with commas or decimals (currencies, Dewey Decimal System, etc), some unique values can pass as valid numbers:
+- In order to support numbers with commas or decimals (currencies, Dewey Decimal System, etc), some unique values can pass as valid numbers (see [Issue #1](https://github.com/radiovisual/num-or-not/issues/1)):
  - `1,2,3.4.5`
  - `1,2,3,4.5`
  
